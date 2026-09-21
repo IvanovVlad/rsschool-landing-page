@@ -226,7 +226,7 @@ a {
 /* Navigation */
 .nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding-block: 8px;
   margin-bottom: 20px;
@@ -246,6 +246,10 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .nav-link {
@@ -304,8 +308,17 @@ a {
   background: none;
   border: none;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
+  padding-inline: 0;
+
   color: var(--primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.menu-button-active {
+  border-bottom: 2px solid;
 }
 
 /* Main Content */
@@ -604,14 +617,15 @@ a {
 }
 
 .footer-combo {
-  border-radius: 40px;
+  padding: 100px;
   background: var(--bg-container);
+  border-radius: 40px;
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   gap: 100px;
-  padding: 100px;
 
   @media (max-width: 768px) {
     padding: 100px 60px;
@@ -728,6 +742,7 @@ a {
 
 .price-cards {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
