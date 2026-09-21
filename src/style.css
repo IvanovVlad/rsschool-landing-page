@@ -3,6 +3,9 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition:
+    background-color linear 0.2s,
+    border-color linear 0.2s;
 }
 
 body {
@@ -16,7 +19,7 @@ button * {
   font-family: Inter, sans-serif;
 }
 
-:root {
+body[theme="light"] {
   --primary: #403f3d;
   --inverse: #e1d4c9;
   --accent: #b0907a;
@@ -24,16 +27,27 @@ button * {
   --bg-container: #665f55;
   --bg-overlay: #403f3d80;
   --b-primary: #c1b6ad;
+  --b-primary-dark: #665f55;
   --b-inverse: #665f55;
+}
 
-  --primary-dark: #e1d4c9;
-  --inverse-dark: #e1d4c9;
-  --accent-dark: #b0907a;
-  --page-dark: #292826;
-  --container-dark: #403f3d;
-  --overlay-dark: #29282680;
-  --b-dark: #665f55;
-  --b-inverse-dark: #c1b6ad;
+body[theme="dark"] {
+  --primary: #e1d4c9;
+  --inverse: #e1d4c9;
+  --accent: #b0907a;
+  --bg-page: #292826;
+  --bg-container: #403f3d;
+  --bg-overlay: #29282680;
+  --b-primary: #665f55;
+  --b-inverse: #c1b6ad;
+}
+
+body[theme="dark"] [hide-light] {
+  display: none !important;
+}
+
+body[theme="light"] [hide-dark] {
+  display: none !important;
 }
 
 /* Typography */
@@ -271,7 +285,8 @@ a {
 
   &:hover {
     font-weight: 600;
-    border-bottom: 2px solid;
+    text-decoration: underline solid 2px;
+    text-underline-offset: 4px;
   }
 }
 
@@ -306,8 +321,28 @@ a {
   padding: 0;
 }
 
-.theme-toggle-btn.active {
+body[theme="light"] .theme-toggle-btn.active-light {
   background-color: var(--accent);
+}
+
+body[theme="dark"] .theme-toggle-btn.active-dark {
+  background-color: var(--accent);
+}
+
+body[theme="dark"] .theme-toggle-btn.active-light:hover {
+  background-color: var(--bg-container);
+}
+
+body[theme="light"] .theme-toggle-btn.active-dark:hover {
+  background-color: var(--b-primary-dark);
+}
+
+body[theme="light"] .theme-toggle-btn.active-dark:hover [hide-light] {
+  display: none;
+}
+
+body[theme="light"] .theme-toggle-btn.active-dark:hover [hide-dark] {
+  display: block !important;
 }
 
 /* Menu Button */
@@ -333,11 +368,13 @@ a {
 }
 
 .menu-button:hover {
-  border-bottom: 2px solid;
+  text-decoration: underline solid 2px;
+  text-underline-offset: 4px;
 }
 
 .menu-button-active {
-  border-bottom: 2px solid;
+  text-decoration: underline solid 2px;
+  text-underline-offset: 4px;
 }
 
 /* Main Content */
@@ -405,6 +442,7 @@ a {
   background: url("/icons/arrow-left.svg") center no-repeat;
 }
 
+body[theme="dark"] .slider-button::after,
 .slider-button:hover.slider-button::after {
   background: url("/icons/arrow-left-inverse.svg") center no-repeat;
 }
@@ -622,10 +660,12 @@ a {
   background-repeat: no-repeat;
 }
 
+body[theme="dark"] .image-apple-store,
 .download-button:hover .image-apple-store {
   background-image: url("/icons/apple-inverse.svg");
 }
 
+body[theme="dark"] .image-play-market,
 .download-button:hover .image-play-market {
   background-image: url("/icons/play-market-inverse.svg");
 }
@@ -715,6 +755,11 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.contact-link:hover {
+  text-decoration: underline solid 2px;
+  text-underline-offset: 4px;
 }
 
 .menu-title {

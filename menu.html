@@ -4,15 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light" />
     <title>rsschool-landing-page</title>
     <link rel="stylesheet" type="text/css" href="/font/index.css" />
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
   </head>
   <body>
+    <script type="text/javascript">
+      const setLightTheme = () => {
+        console.log("light theme");
+        window.localStorage.setItem("theme", "light");
+        document.body.setAttribute("theme", "light");
+      };
+
+      const setDarkTheme = () => {
+        window.localStorage.setItem("theme", "dark");
+        document.body.setAttribute("theme", "dark");
+      };
+
+      let theme = window.localStorage.getItem("theme");
+
+      if (!theme || !["dark", "light"].includes(theme)) {
+        setLightTheme();
+      } else if (theme === "light") {
+        setLightTheme();
+      } else if (theme === "dark") {
+        setDarkTheme();
+      }
+    </script>
     <header class="header">
       <nav class="nav">
         <a href="/rsschool-landing-page">
-          <img src="/logo.png" alt="COFFEE HOUSE logo" class="logo" />
+          <img src="/logo.png" alt="COFFEE HOUSE logo" class="logo" hide-light />
+          <img src="/logo-dark.png" alt="COFFEE HOUSE logo" class="logo" hide-dark />
         </a>
         <ul class="nav-menu">
           <li>
@@ -30,16 +54,26 @@
         </ul>
         <div class="nav-controls">
           <div class="theme-toggle">
-            <button class="theme-toggle-btn active" aria-label="Light mode">
+            <button
+              onclick="setLightTheme()"
+              class="theme-toggle-btn active-light"
+              aria-label="Light mode"
+            >
               <img src="/icons/sun.svg" alt="sun" />
             </button>
-            <button class="theme-toggle-btn" aria-label="Dark mode">
-              <img src="/icons/moon.svg" alt="moon" />
+            <button
+              onclick="setDarkTheme()"
+              class="theme-toggle-btn active-dark"
+              aria-label="Dark mode"
+            >
+              <img src="/icons/moon.svg" alt="" hide-light />
+              <img src="/icons/moon-inverse.svg" alt="" hide-dark />
             </button>
           </div>
           <button class="menu-button menu-button-active">
             <span>Menu</span>
-            <img src="/icons/coffee-cup.svg" alt="coffee cup" />
+            <img src="/icons/coffee-cup.svg" alt="coffee cup" hide-light />
+            <img src="/icons/coffee-cup-inverse.svg" alt="coffee cup" hide-dark />
           </button>
           <button class="button-secondary menu-mobile-toggle">
             <img src="/icons/menu-mobile-closed.svg" alt="menu-mobile-closed" />
@@ -192,15 +226,15 @@
           <div>
             <div class="contact-combo">
               <img src="/icons/location.svg" alt="location marker" />
-              <span>8558 Green Rd., LA</span>
+              <a href="#" class="contact-link">8558 Green Rd., LA</a>
             </div>
             <div class="contact-combo">
               <img src="/icons/phone.svg" alt="phone icon" />
-              <a href="tel:+16035550123" class="color-inverse">+1 (603) 555-0123</a>
+              <a href="tel:16035550123" class="contact-link">+1 (603) 555-0123</a>
             </div>
             <div class="contact-combo">
               <img width="20" height="20" src="/icons/clock.svg" alt="clock icon" />
-              <span>Mon–Sat: 9:00–23:00</span>
+              <a href="#" class="contact-link">Mon–Sat: 9:00–23:00</a>
             </div>
           </div>
         </div>
