@@ -634,12 +634,17 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 100px;
 }
 
 .download-combo-item {
   max-width: 630px;
   max-height: 630px;
+
+  @media (max-width: 769px) {
+    max-width: 100%;
+  }
 }
 
 .download-mobiles {
