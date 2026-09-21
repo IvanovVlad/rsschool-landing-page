@@ -299,7 +299,7 @@ a {
 }
 
 .slider-button:hover.slider-button::after {
-  background: url("/icons/arrow-left-ascend.svg") center no-repeat;
+  background: url("/icons/arrow-left-inverse.svg") center no-repeat;
 }
 
 .slider-button:hover {
