@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
   </head>
   <body>
-    <script type="text/javascript">
+    <script>
       const setLightTheme = () => {
         console.log("light theme");
         window.localStorage.setItem("theme", "light");
@@ -35,8 +35,8 @@
     <header class="header">
       <nav class="nav">
         <a href="/rsschool-landing-page">
-          <img src="/logo.png" alt="COFFEE HOUSE logo" class="logo" hide-light />
-          <img src="/logo-dark.png" alt="COFFEE HOUSE logo" class="logo" hide-dark />
+          <img src="/logo.png" alt="COFFEE HOUSE logo" class="logo" data-theme="hide-light" />
+          <img src="/logo-dark.png" alt="COFFEE HOUSE logo" class="logo" data-theme="hide-dark" />
         </a>
         <ul class="nav-menu">
           <li>
@@ -66,14 +66,14 @@
               class="theme-toggle-btn active-dark"
               aria-label="Dark mode"
             >
-              <img src="/icons/moon.svg" alt="" hide-light />
-              <img src="/icons/moon-inverse.svg" alt="" hide-dark />
+              <img src="/icons/moon.svg" alt="" data-theme="hide-light" />
+              <img src="/icons/moon-inverse.svg" alt="" data-theme="hide-dark" />
             </button>
           </div>
           <a class="menu-button" href="/rsschool-landing-page/menu.html">
             <span>Menu</span>
-            <img src="/icons/coffee-cup.svg" alt="coffee cup" hide-light />
-            <img src="/icons/coffee-cup-inverse.svg" alt="coffee cup" hide-dark />
+            <img src="/icons/coffee-cup.svg" alt="coffee cup" data-theme="hide-light" />
+            <img src="/icons/coffee-cup-inverse.svg" alt="coffee cup" data-theme="hide-dark" />
           </a>
           <button class="button-secondary menu-mobile-toggle">
             <img src="/icons/menu-mobile-closed.svg" alt="menu-mobile-closed" />

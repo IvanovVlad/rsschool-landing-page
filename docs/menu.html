@@ -7,10 +7,10 @@
     <meta name="color-scheme" content="only light" />
     <title>rsschool-landing-page</title>
     <link rel="stylesheet" type="text/css" href="/rsschool-landing-page/font/index.css" />
-    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/style-DcqVrwB-.css">
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/style-BpF9opiM.css">
   </head>
   <body>
-    <script type="text/javascript">
+    <script>
       const setLightTheme = () => {
         console.log("light theme");
         window.localStorage.setItem("theme", "light");
@@ -35,8 +35,8 @@
     <header class="header">
       <nav class="nav">
         <a href="/rsschool-landing-page">
-          <img src="/rsschool-landing-page/logo.png" alt="COFFEE HOUSE logo" class="logo" hide-light />
-          <img src="/rsschool-landing-page/logo-dark.png" alt="COFFEE HOUSE logo" class="logo" hide-dark />
+          <img src="/rsschool-landing-page/logo.png" alt="COFFEE HOUSE logo" class="logo" data-theme="hide-light" />
+          <img src="/rsschool-landing-page/logo-dark.png" alt="COFFEE HOUSE logo" class="logo" data-theme="hide-dark" />
         </a>
         <ul class="nav-menu">
           <li>
@@ -66,14 +66,14 @@
               class="theme-toggle-btn active-dark"
               aria-label="Dark mode"
             >
-              <img src="/rsschool-landing-page/icons/moon.svg" alt="" hide-light />
-              <img src="/rsschool-landing-page/icons/moon-inverse.svg" alt="" hide-dark />
+              <img src="/rsschool-landing-page/icons/moon.svg" alt="" data-theme="hide-light" />
+              <img src="/rsschool-landing-page/icons/moon-inverse.svg" alt="" data-theme="hide-dark" />
             </button>
           </div>
           <button class="menu-button menu-button-active">
             <span>Menu</span>
-            <img src="/rsschool-landing-page/icons/coffee-cup.svg" alt="coffee cup" hide-light />
-            <img src="/rsschool-landing-page/icons/coffee-cup-inverse.svg" alt="coffee cup" hide-dark />
+            <img src="/rsschool-landing-page/icons/coffee-cup.svg" alt="coffee cup" data-theme="hide-light" />
+            <img src="/rsschool-landing-page/icons/coffee-cup-inverse.svg" alt="coffee cup" data-theme="hide-dark" />
           </button>
           <button class="button-secondary menu-mobile-toggle">
             <img src="/rsschool-landing-page/icons/menu-mobile-closed.svg" alt="menu-mobile-closed" />

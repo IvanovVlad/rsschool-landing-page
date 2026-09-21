@@ -42,11 +42,11 @@ body[theme="dark"] {
   --b-inverse: #c1b6ad;
 }
 
-body[theme="dark"] [hide-light] {
+body[theme="dark"] [data-theme="hide-light"] {
   display: none !important;
 }
 
-body[theme="light"] [hide-dark] {
+body[theme="light"] [data-theme="hide-dark"] {
   display: none !important;
 }
 
@@ -337,11 +337,11 @@ body[theme="light"] .theme-toggle-btn.active-dark:hover {
   background-color: var(--b-primary-dark);
 }
 
-body[theme="light"] .theme-toggle-btn.active-dark:hover [hide-light] {
+body[theme="light"] .theme-toggle-btn.active-dark:hover [data-theme="hide-light"] {
   display: none;
 }
 
-body[theme="light"] .theme-toggle-btn.active-dark:hover [hide-dark] {
+body[theme="light"] .theme-toggle-btn.active-dark:hover [data-theme="hide-dark"] {
   display: block !important;
 }
 
