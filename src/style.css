@@ -64,6 +64,10 @@ a {
   text-decoration: none;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .color-accent {
   color: var(--accent);
 }
@@ -656,4 +660,121 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.menu-title {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-selector {
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-selector-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+
+  padding: 8px 16px 8px 8px;
+  border-radius: 100px;
+  border: 1px solid var(--bg-container);
+}
+
+.menu-selector-item:hover {
+  cursor: pointer;
+}
+
+.menu-selector-item-active {
+  color: var(--inverse);
+  background-color: var(--bg-container);
+  border-color: var(--bg-container);
+}
+
+.menu-selector-item-active .menu-selector-icon {
+  background: var(--bg-page);
+}
+
+.menu-selector-icon {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  background: var(--b-primary);
+
+  border-radius: 50%;
+}
+
+.menu-selector-icon img {
+  width: 16px;
+}
+
+.price-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.price-card {
+  width: 310px;
+  height: 506px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  border: 1px solid var(--b-primary);
+  overflow: hidden;
+}
+
+.card-image {
+  width: 310px;
+  height: 310px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.card-description {
+  line-height: 150%;
+}
+
+.card-price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
 }
