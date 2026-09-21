@@ -238,6 +238,16 @@ a {
   height: 60px;
 }
 
+.menu-mobile-toggle {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
 .nav-menu {
   display: flex;
   justify-content: center;
@@ -316,6 +326,10 @@ a {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-button:hover {
