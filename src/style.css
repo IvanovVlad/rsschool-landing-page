@@ -381,9 +381,10 @@ a {
 }
 
 .hero-cta {
-  padding: 20px 78px;
+  padding: 21px 78px;
   font-size: 16px;
   font-weight: 600;
+  width: 200px;
 }
 
 .slider-button {
@@ -520,25 +521,35 @@ a {
   max-width: 660px;
 }
 
-.photo-1 {
-  background: url("/about-1.png") 50% / cover no-repeat;
-  background-size: 726px;
+.photo img {
+  transform: scale(110%);
+  transition: transform linear 0.2s;
+  object-fit: cover;
+  width: 100%;
+}
+
+.photo:hover img {
+  transform: scale(100%);
+}
+
+.photo-1 img {
   height: 590px;
 }
 
 .photo-2 {
-  background: url("/about-2.png") 50% / cover no-repeat;
   background-size: 726px;
   height: 430px;
 
   @media (max-width: 768px) {
     display: none;
   }
+}
+
+.photo-2 img {
+  height: 430px;
 }
 
 .photo-3 {
-  background: url("/about-3.png") 50% / cover no-repeat;
-  background-size: 726px;
   height: 430px;
 
   @media (max-width: 768px) {
@@ -546,9 +557,15 @@ a {
   }
 }
 
+.photo-3 img {
+  height: 430px;
+}
+
 .photo-4 {
-  background: url("/about-4.png") 50% / cover no-repeat;
-  background-size: 726px;
+  height: 590px;
+}
+
+.photo-4 img {
   height: 590px;
 }
 
