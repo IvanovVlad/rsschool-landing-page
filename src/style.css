@@ -92,6 +92,10 @@ a {
   }
 }
 
+.no-margin {
+  margin: 0 !important;
+}
+
 .button-primary {
   display: flex;
   justify-content: center;
@@ -135,6 +139,72 @@ a {
 
 .button-secondary:hover * {
   color: var(--inverse);
+}
+
+.button-social {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--b-primary);
+  border-radius: 50%;
+}
+
+.button-social:hover {
+  background: var(--bg-page);
+  border-color: var(--bg-page);
+  cursor: pointer;
+}
+
+.button-social.social-twitter::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/twitter-bird.svg");
+}
+
+.button-social:hover.social-twitter::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/twitter-bird-primary.svg");
+}
+
+.button-social.social-instagram::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/instagram.svg");
+}
+
+.button-social:hover.social-instagram::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/instagram-primary.svg");
+}
+
+.button-social.social-facebook::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/facebook.svg");
+}
+
+.button-social:hover.social-facebook::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/facebook-primary.svg");
 }
 
 /* Header */
@@ -537,7 +607,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   gap: 100px;
-  padding-inline: 100px;
+  padding: 100px;
 
   @media (max-width: 768px) {
     padding: 100px 60px;
@@ -550,4 +620,40 @@ a {
 
 .footer-item {
   max-width: 530px;
+}
+
+.footer-item-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-title {
+  color: var(--inverse);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+
+  margin-bottom: 40px;
+}
+
+.contact-combo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--inverse);
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.contact-combo:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contact-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
