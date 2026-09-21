@@ -1,12 +1,13 @@
 @font-face {
   font-family: Inter;
-  src: url(/font/Inter/Inter-VariableFont_opsz,wght.ttf) format("truetype");
+  src: url(/rsschool-landing-page/font/Inter/Inter-VariableFont_opsz,wght.ttf) format("truetype");
   font-weight: 100 900;
   font-optical-sizing: auto;
 }
 @font-face {
   font-family: Inter;
-  src: url(/font/Inter/Inter-Italic-VariableFont_opsz,wght.ttf) format("truetype");
+  src: url(/rsschool-landing-page/font/Inter/Inter-Italic-VariableFont_opsz,wght.ttf)
+    format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-optical-sizing: auto;
@@ -223,7 +224,7 @@ a {
   }
 }
 .hero-section {
-  background-image: url(/img-hero.png);
+  background-image: url(/rsschool-landing-page/img-hero.png);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -262,7 +263,7 @@ a {
 }
 .slider-button:after {
   content: "";
-  background: url(/icons/arrow-left.svg) 50% no-repeat;
+  background: url(/rsschool-landing-page/icons/arrow-left.svg) 50% no-repeat;
   width: 24px;
   height: 24px;
   display: block;
@@ -366,11 +367,11 @@ a {
   display: flex;
 }
 .photo-1 {
-  background: url(/about-1.png) 50%/726px no-repeat;
+  background: url(/rsschool-landing-page/about-1.png) 50%/726px no-repeat;
   height: 590px;
 }
 .photo-2 {
-  background: url(/about-2.png) 50%/726px no-repeat;
+  background: url(/rsschool-landing-page/about-2.png) 50%/726px no-repeat;
   height: 430px;
 }
 @media (width <= 768px) {
@@ -379,7 +380,7 @@ a {
   }
 }
 .photo-3 {
-  background: url(/about-3.png) 50%/726px no-repeat;
+  background: url(/rsschool-landing-page/about-3.png) 50%/726px no-repeat;
   height: 430px;
 }
 @media (width <= 768px) {
@@ -388,7 +389,7 @@ a {
   }
 }
 .photo-4 {
-  background: url(/about-4.png) 50%/726px no-repeat;
+  background: url(/rsschool-landing-page/about-4.png) 50%/726px no-repeat;
   height: 590px;
 }
 .download-text {
@@ -424,24 +425,24 @@ a {
   line-height: 140%;
 }
 .image-play-market {
-  background-image: url(/icons/play-market.svg);
+  background-image: url(/rsschool-landing-page/icons/play-market.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   width: 36px;
   height: 36px;
 }
 .image-apple-store {
-  background-image: url(/icons/apple.svg);
+  background-image: url(/rsschool-landing-page/icons/apple.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   width: 36px;
   height: 36px;
 }
 .download-button:hover .image-apple-store {
-  background-image: url(/icons/apple-inverse.svg);
+  background-image: url(/rsschool-landing-page/icons/apple-inverse.svg);
 }
 .download-button:hover .image-play-market {
-  background-image: url(/icons/play-market-inverse.svg);
+  background-image: url(/rsschool-landing-page/icons/play-market-inverse.svg);
 }
 .download-combo {
   justify-content: space-between;
