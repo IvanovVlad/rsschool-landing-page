@@ -8,8 +8,43 @@
     <link rel="stylesheet" type="text/css" href="/font/index.css" />
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-page">
+    <header class="header">
+      <nav class="nav flex-s-c">
+        <img src="/logo.png" alt="COFFEE HOUSE logo" class="logo" />
+        <ul class="list flex-c-c flex-1 gap-x-40">
+          <li class="list-i">
+            <a href="#" class="link">Favorite coffee</a>
+          </li>
+          <li class="list-i">
+            <a href="#" class="link">About</a>
+          </li>
+          <li class="list-i">
+            <a href="#" class="link">Mobile app</a>
+          </li>
+          <li class="list-i">
+            <a href="#" class="link">Contact us</a>
+          </li>
+        </ul>
+        <div class="flex-sb-c gap-x-24">
+          <div class="flex-sb-c b b-1 b-primary br-100 gap-x-8 p-3">
+            <div class="w-36 h-36 br-full flex-c-c bg-accent">
+              <img src="/icons/sun.svg" alt="sun (light mode)" />
+            </div>
+            <div class="w-36 h-36 br-full flex-c-c">
+              <img src="/icons/moon.svg" alt="moon (dark mode)" />
+            </div>
+          </div>
+          <div class="flex-sb-c gap-x-8">
+            <span>Menu</span>
+            <img src="/icons/cofee-cup.svg" alt="coffee cup" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <h1 class="h1 c-primary">Hello</h1>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
