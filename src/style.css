@@ -785,9 +785,21 @@ a {
 }
 
 .card-image img {
+  transform: scale(110%);
+  transition: transform linear 0.2s;
+
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.price-card:hover {
+  cursor: pointer;
+}
+
+.price-card:hover .card-image img {
+  transform: scale(100%);
+  background-size: 90%;
 }
 
 .card-info {
