@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/rsschool-landing-page/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light" />
+    <title>rsschool-landing-page</title>
+    <link rel="stylesheet" type="text/css" href="/rsschool-landing-page/font/index.css" />
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/style-C5H_LYM0.css">
+  </head>
+  <body>
+    <script>
+      const setLightTheme = () => {
+        console.log("light theme");
+        window.localStorage.setItem("theme", "light");
+        document.body.setAttribute("theme", "light");
+      };
+
+      const setDarkTheme = () => {
+        window.localStorage.setItem("theme", "dark");
+        document.body.setAttribute("theme", "dark");
+      };
+
+      let theme = window.localStorage.getItem("theme");
+
+      if (!theme || !["dark", "light"].includes(theme)) {
+        setLightTheme();
+      } else if (theme === "light") {
+        setLightTheme();
+      } else if (theme === "dark") {
+        setDarkTheme();
+      }
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <a href="/rsschool-landing-page">
+          <img src="/rsschool-landing-page/logo.png" alt="COFFEE HOUSE logo" class="logo" data-theme="hide-light" />
+          <img src="/rsschool-landing-page/logo-dark.png" alt="COFFEE HOUSE logo" class="logo" data-theme="hide-dark" />
+        </a>
+        <ul class="nav-menu">
+          <li>
+            <a href="/rsschool-landing-page#favorite-coffee" class="nav-link">Favorite coffee</a>
+          </li>
+          <li>
+            <a href="/rsschool-landing-page#about" class="nav-link">About</a>
+          </li>
+          <li>
+            <a href="/rsschool-landing-page#download-app" class="nav-link">Mobile app</a>
+          </li>
+          <li>
+            <a href="/rsschool-landing-page#contacts" class="nav-link">Contact us</a>
+          </li>
+        </ul>
+        <div class="nav-controls">
+          <div class="theme-toggle">
+            <button
+              onclick="setLightTheme()"
+              class="theme-toggle-btn active-light"
+              aria-label="Light mode"
+            >
+              <img src="/rsschool-landing-page/icons/sun.svg" alt="sun" />
+            </button>
+            <button
+              onclick="setDarkTheme()"
+              class="theme-toggle-btn active-dark"
+              aria-label="Dark mode"
+            >
+              <img src="/rsschool-landing-page/icons/moon.svg" alt="" data-theme="hide-light" />
+              <img src="/rsschool-landing-page/icons/moon-inverse.svg" alt="" data-theme="hide-dark" />
+            </button>
+          </div>
+          <button class="menu-button menu-button-active">
+            <span>Menu</span>
+            <img src="/rsschool-landing-page/icons/coffee-cup.svg" alt="coffee cup" data-theme="hide-light" />
+            <img src="/rsschool-landing-page/icons/coffee-cup-inverse.svg" alt="coffee cup" data-theme="hide-dark" />
+          </button>
+          <button class="button-secondary menu-mobile-toggle">
+            <img src="/rsschool-landing-page/icons/menu-mobile-closed.svg" alt="menu-mobile-closed" />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <h1 class="section-header menu-title">
+        Behind each of our cups hides an <span class="italic color-accent">amazing surprise</span>
+      </h1>
+      <div>
+        <div>
+          <div class="menu-selector">
+            <div class="menu-selector-item menu-selector-item-active">
+              <div class="menu-selector-icon"><img src="/rsschool-landing-page/icons/coffee.svg" alt="coffee" /></div>
+              <div>Coffee</div>
+            </div>
+            <div class="menu-selector-item">
+              <div class="menu-selector-icon"><img src="/rsschool-landing-page/icons/glass.svg" alt="tea" /></div>
+              <div>Tea</div>
+            </div>
+            <div class="menu-selector-item">
+              <div class="menu-selector-icon">
+                <img src="/rsschool-landing-page/icons/cake-slice.svg" alt="dessert" />
+              </div>
+              <div>Dessert</div>
+            </div>
+          </div>
+        </div>
+        <div class="price-cards">
+          <div class="price-card">
+            <div class="card-image">
+              <img src="/rsschool-landing-page/dishes/coffee-1.png" alt="Irish cofee" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Irish coffee</div>
+              <div class="card-description">
+                Fragrant black coffee with Jameson Irish whiskey and whipped milk
+              </div>
+              <div class="card-price">$7.00</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="card-image">
+              <img src="/rsschool-landing-page/dishes/coffee-2.png" alt="Kahlua coffee" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Kahlua coffee</div>
+              <div class="card-description">
+                Classic coffee with milk and Kahlua liqueur under a cap of frothed milk
+              </div>
+              <div class="card-price">$7.00</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="card-image">
+              <img src="/rsschool-landing-page/dishes/coffee-3.png" alt="Irish cofee" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Honey raf</div>
+              <div class="card-description">
+                Espresso with frothed milk, cream and aromatic honey
+              </div>
+              <div class="card-price">$7.00</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="card-image">
+              <img src="/rsschool-landing-page/dishes/coffee-4.png" alt="Ice cappuccino" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Ice cappuccino</div>
+              <div class="card-description">
+                Cappuccino with soft thick foam in summer version with ice
+              </div>
+              <div class="card-price">$5.00</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="card-image">
+              <img src="/rsschool-landing-page/dishes/coffee-5.png" alt="Irish cofee" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Espresso</div>
+              <div class="card-description">Classic black coffee</div>
+              <div class="card-price">$4.50</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="card-image">
+              <img src="/rsschool-landing-page/dishes/coffee-6.png" alt="Latte" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Latte</div>
+              <div class="card-description">
+                Espresso coffee with the addition of steamed milk and dense milk foam
+              </div>
+              <div class="card-price">$5.00</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="card-image">
+              <img src="/rsschool-landing-page/dishes/coffee-7.png" alt="Latte macchiato" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Latte macchiato</div>
+              <div class="card-description">Espresso with frothed milk and chocolate</div>
+              <div class="card-price">$5.50</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="card-image">
+              <img src="/rsschool-landing-page/dishes/coffee-8.png" alt="Irish cofee" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Coffee with cognac</div>
+              <div class="card-description">
+                Fragrant black coffee with cognac and whipped cream
+              </div>
+              <div class="card-price">$6.50</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-combo">
+        <div class="footer-item footer-item-left">
+          <h2 class="section-header no-margin">
+            <span class="color-inverse italic">Sip, Savor, Smile.</span>
+            <span class="color-accent italic">It’s coffee time!</span>
+          </h2>
+          <div class="contact-socials">
+            <a class="button-social social-twitter" href="https://twitter.com" target="_blank"></a>
+            <a
+              class="button-social social-instagram"
+              href="https://instagram.com"
+              target="_blank"
+            ></a>
+            <a
+              class="button-social social-facebook"
+              href="https://facebook.com"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+        <div class="footer-item">
+          <div class="contact-title">Contact us</div>
+          <div>
+            <div class="contact-combo">
+              <img src="/rsschool-landing-page/icons/location.svg" alt="location marker" />
+              <a href="#" class="contact-link">8558 Green Rd., LA</a>
+            </div>
+            <div class="contact-combo">
+              <img src="/rsschool-landing-page/icons/phone.svg" alt="phone icon" />
+              <a href="tel:16035550123" class="contact-link">+1 (603) 555-0123</a>
+            </div>
+            <div class="contact-combo">
+              <img width="20" height="20" src="/rsschool-landing-page/icons/clock.svg" alt="clock icon" />
+              <a href="#" class="contact-link">Mon–Sat: 9:00–23:00</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
