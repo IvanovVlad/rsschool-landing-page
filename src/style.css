@@ -347,12 +347,16 @@ body[theme="light"] .theme-toggle-btn.active-dark:hover [data-theme="hide-dark"]
 
 /* Menu Button */
 .menu-button {
+  position: relative;
+  top: 3px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 8px;
   background: none;
   border: none;
+  border-bottom: 3px solid transparent;
   cursor: pointer;
   padding-inline: 0;
 
@@ -368,13 +372,11 @@ body[theme="light"] .theme-toggle-btn.active-dark:hover [data-theme="hide-dark"]
 }
 
 .menu-button:hover {
-  text-decoration: underline solid 2px;
-  text-underline-offset: 4px;
+  border-bottom-color: inherit;
 }
 
 .menu-button-active {
-  text-decoration: underline solid 2px;
-  text-underline-offset: 4px;
+  border-bottom-color: inherit;
 }
 
 /* Main Content */
@@ -431,10 +433,19 @@ body[theme="light"] .theme-toggle-btn.active-dark:hover [data-theme="hide-dark"]
 }
 
 .hero-cta {
-  padding: 21px 78px;
+  padding: 21px;
   font-size: 16px;
   font-weight: 600;
   width: 200px;
+  height: 64px;
+}
+
+.hero-cta img {
+  display: none;
+}
+
+.hero-cta:hover img {
+  display: block;
 }
 
 .slider-button {
