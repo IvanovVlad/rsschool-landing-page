@@ -7,8 +7,8 @@
     <meta name="color-scheme" content="only light" />
     <title>rsschool-landing-page</title>
     <link rel="stylesheet" type="text/css" href="/rsschool-landing-page/font/index.css" />
-    <script type="module" crossorigin src="/rsschool-landing-page/assets/theme-DD4miBF0.js"></script>
-    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/theme-BSyhNGEz.css">
+    <script type="module" crossorigin src="/rsschool-landing-page/assets/nav-CmqrBJgO.js"></script>
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/nav-Dbgan18B.css">
   </head>
   <body>
     <header class="header">
@@ -49,16 +49,50 @@
               <img src="/rsschool-landing-page/icons/moon-inverse.svg" alt="" data-theme="hide-dark" />
             </button>
           </div>
-          <a class="menu-button" href="/rsschool-landing-page/menu.html">
+          <a class="menu-button menu-button-hide-laptop" href="/rsschool-landing-page/menu.html">
             <span>Menu</span>
             <img src="/rsschool-landing-page/icons/coffee-cup.svg" alt="coffee cup" data-theme="hide-light" />
             <img src="/rsschool-landing-page/icons/coffee-cup-inverse.svg" alt="coffee cup" data-theme="hide-dark" />
           </a>
-          <button class="button-secondary menu-mobile-toggle">
-            <img src="/rsschool-landing-page/icons/menu-mobile-closed.svg" alt="menu-mobile-closed" />
+          <button
+            class="button-secondary menu-mobile-toggle"
+            id="nav-toggle-button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="nav-mobile"
+          >
+            <svg
+              class="nav-toggle-icon"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <line class="nav-toggle-line nav-toggle-line-top" x1="1" y1="9" x2="17" y2="9" />
+              <line class="nav-toggle-line nav-toggle-line-bottom" x1="1" y1="9" x2="17" y2="9" />
+            </svg>
           </button>
         </div>
       </nav>
+      <div class="nav-mobile nav-mobile-hidden" id="nav-mobile">
+        <div class="nav-mobile-content">
+          <div class="nav-mobile-options">
+            <a href="/rsschool-landing-page#favorite-coffee" class="nav-link">Favorite coffee</a>
+            <a href="/rsschool-landing-page#about" class="nav-link">About</a>
+            <a href="/rsschool-landing-page#download-app" class="nav-link">Mobile app</a>
+            <a href="/rsschool-landing-page#contacts" class="nav-link">Contact us</a>
+          </div>
+          <div class="nav-mobile-menu-button">
+            <a href="/rsschool-landing-page/menu.html" class="menu-button">
+              <span>Menu</span>
+              <img src="/rsschool-landing-page/icons/coffee-cup.svg" alt="coffee cup" data-theme="hide-light" />
+              <img src="/rsschool-landing-page/icons/coffee-cup-inverse.svg" alt="coffee cup" data-theme="hide-dark" />
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="main">
       <section class="section hero-section">
