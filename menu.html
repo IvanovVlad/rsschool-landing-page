@@ -8,30 +8,10 @@
     <title>rsschool-landing-page</title>
     <link rel="stylesheet" type="text/css" href="/font/index.css" />
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
+    <script src="/src/theme.js" defer type="module"></script>
+    <script src="/src/catalogue.js" defer type="module"></script>
   </head>
   <body>
-    <script>
-      const setLightTheme = () => {
-        console.log("light theme");
-        window.localStorage.setItem("theme", "light");
-        document.body.setAttribute("theme", "light");
-      };
-
-      const setDarkTheme = () => {
-        window.localStorage.setItem("theme", "dark");
-        document.body.setAttribute("theme", "dark");
-      };
-
-      let theme = window.localStorage.getItem("theme");
-
-      if (!theme || !["dark", "light"].includes(theme)) {
-        setLightTheme();
-      } else if (theme === "light") {
-        setLightTheme();
-      } else if (theme === "dark") {
-        setDarkTheme();
-      }
-    </script>
     <header class="header">
       <nav class="nav">
         <a href="/rsschool-landing-page">
