@@ -17,3 +17,6 @@ if (!theme || !["dark", "light"].includes(theme)) {
 } else if (theme === "dark") {
   setDarkTheme();
 }
+
+document.querySelector("#light-theme-switch").addEventListener("click", () => setLightTheme());
+document.querySelector("#dark-theme-switch").addEventListener("click", () => setDarkTheme());

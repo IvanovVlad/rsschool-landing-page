@@ -8,9 +8,9 @@
     <title>rsschool-landing-page</title>
     <link rel="stylesheet" type="text/css" href="/font/index.css" />
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
+    <script src="/src/theme.js" defer type="module"></script>
   </head>
   <body>
-    <script src="/src/theme.js" type="module"></script>
     <header class="header">
       <nav class="nav">
         <a href="/rsschool-landing-page">
@@ -34,16 +34,16 @@
         <div class="nav-controls">
           <div class="theme-toggle">
             <button
-              onclick="setLightTheme()"
               class="theme-toggle-btn active-light"
               aria-label="Light mode"
+              id="light-theme-switch"
             >
               <img src="/icons/sun.svg" alt="" />
             </button>
             <button
-              onclick="setDarkTheme()"
               class="theme-toggle-btn active-dark"
               aria-label="Dark mode"
+              id="dark-theme-switch"
             >
               <img src="/icons/moon.svg" alt="" data-theme="hide-light" />
               <img src="/icons/moon-inverse.svg" alt="" data-theme="hide-dark" />
@@ -114,18 +114,18 @@
         </h2>
         <div class="photos-container">
           <div class="photo-group">
-            <div class="photo photo-1">
+            <div class="photo photo-1 image-zoom-container">
               <img src="/about-1.png" alt="Coffee time" />
             </div>
-            <div class="photo photo-2">
+            <div class="photo photo-2 image-zoom-container">
               <img src="/about-2.png" alt="Tea time" />
             </div>
           </div>
           <div class="photo-group">
-            <div class="photo photo-3">
+            <div class="photo photo-3 image-zoom-container">
               <img src="/about-3.png" alt="Just a cup" />
             </div>
-            <div class="photo photo-4">
+            <div class="photo photo-4 image-zoom-container">
               <img src="/about-4.png" alt="Pair with coffee" />
             </div>
           </div>

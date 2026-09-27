@@ -9,9 +9,9 @@
     <link rel="stylesheet" type="text/css" href="/font/index.css" />
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
     <script src="/src/catalogue.js" defer type="module"></script>
+    <script src="/src/theme.js" defer type="module"></script>
   </head>
   <body>
-    <script src="/src/theme.js" type="module"></script>
     <header class="header">
       <nav class="nav">
         <a href="/rsschool-landing-page">
@@ -35,16 +35,16 @@
         <div class="nav-controls">
           <div class="theme-toggle">
             <button
-              onclick="setLightTheme()"
               class="theme-toggle-btn active-light"
               aria-label="Light mode"
+              id="light-theme-switch"
             >
               <img src="/icons/sun.svg" alt="sun" />
             </button>
             <button
-              onclick="setDarkTheme()"
               class="theme-toggle-btn active-dark"
               aria-label="Dark mode"
+              id="dark-theme-switch"
             >
               <img src="/icons/moon.svg" alt="" data-theme="hide-light" />
               <img src="/icons/moon-inverse.svg" alt="" data-theme="hide-dark" />
@@ -127,5 +127,6 @@
         </div>
       </div>
     </footer>
+    <div class="modal-container modal-container-hidden" id="modal-container"></div>
   </body>
 </html>

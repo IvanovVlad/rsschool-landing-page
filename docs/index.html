@@ -7,8 +7,8 @@
     <meta name="color-scheme" content="only light" />
     <title>rsschool-landing-page</title>
     <link rel="stylesheet" type="text/css" href="/rsschool-landing-page/font/index.css" />
-    <script type="module" crossorigin src="/rsschool-landing-page/assets/theme-ChqYFPy0.js"></script>
-    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/theme-BkA3_W4z.css">
+    <script type="module" crossorigin src="/rsschool-landing-page/assets/theme-DD4miBF0.js"></script>
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/theme-BSyhNGEz.css">
   </head>
   <body>
     <header class="header">
@@ -34,16 +34,16 @@
         <div class="nav-controls">
           <div class="theme-toggle">
             <button
-              onclick="setLightTheme()"
               class="theme-toggle-btn active-light"
               aria-label="Light mode"
+              id="light-theme-switch"
             >
               <img src="/rsschool-landing-page/icons/sun.svg" alt="" />
             </button>
             <button
-              onclick="setDarkTheme()"
               class="theme-toggle-btn active-dark"
               aria-label="Dark mode"
+              id="dark-theme-switch"
             >
               <img src="/rsschool-landing-page/icons/moon.svg" alt="" data-theme="hide-light" />
               <img src="/rsschool-landing-page/icons/moon-inverse.svg" alt="" data-theme="hide-dark" />
@@ -114,18 +114,18 @@
         </h2>
         <div class="photos-container">
           <div class="photo-group">
-            <div class="photo photo-1">
+            <div class="photo photo-1 image-zoom-container">
               <img src="/rsschool-landing-page/about-1.png" alt="Coffee time" />
             </div>
-            <div class="photo photo-2">
+            <div class="photo photo-2 image-zoom-container">
               <img src="/rsschool-landing-page/about-2.png" alt="Tea time" />
             </div>
           </div>
           <div class="photo-group">
-            <div class="photo photo-3">
+            <div class="photo photo-3 image-zoom-container">
               <img src="/rsschool-landing-page/about-3.png" alt="Just a cup" />
             </div>
-            <div class="photo photo-4">
+            <div class="photo photo-4 image-zoom-container">
               <img src="/rsschool-landing-page/about-4.png" alt="Pair with coffee" />
             </div>
           </div>
