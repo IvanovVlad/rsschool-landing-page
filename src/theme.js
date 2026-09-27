@@ -1,5 +1,4 @@
 const setLightTheme = () => {
-  console.log("light theme");
   window.localStorage.setItem("theme", "light");
   document.body.setAttribute("theme", "light");
 };
