@@ -8,8 +8,8 @@ export default defineConfig({
     outDir: "docs",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        menu: resolve(__dirname, "menu.html"),
+        main: resolve(import.meta.dirname, "index.html"),
+        menu: resolve(import.meta.dirname, "menu.html"),
       },
     },
   },
