@@ -20,7 +20,7 @@ const sliderItemsData = [
     name: "Caramel Macchiato",
     description:
       "Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.",
-    price: "5.50",
+    price: "5.00",
     imageLink: "/rsschool-landing-page/coffee-slider-2.png",
   },
   {
@@ -28,7 +28,7 @@ const sliderItemsData = [
     name: "Ice coffee",
     description:
       "A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.",
-    price: "5.50",
+    price: "4.50",
     imageLink: "/rsschool-landing-page/coffee-slider-3.png",
   },
 ];
