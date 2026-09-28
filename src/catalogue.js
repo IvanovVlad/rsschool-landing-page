@@ -29,7 +29,8 @@
 
 let allProducts,
   activeCategory = "coffee",
-  activeProducts = [];
+  activeProducts = [],
+  modalOpen = false;
 const productsContainer = document.querySelector("#products-container"),
   categoryContainers = {
     coffee: document.querySelector("#categories-coffee"),
@@ -112,7 +113,7 @@ const renderProductCards = () => {
       if (key === "name") {
         models.push({
           key: "imageLink",
-          value: `/rsschool-landing-page/dishes/${normName(value)}.png`,
+          value: `/rsschool-landing-page/dishes/${normName(value)}.webp`,
         });
       }
       models.push({ key, value });
@@ -140,6 +141,7 @@ const setCategory = (category) => {
 };
 
 const closeProductModal = () => {
+  modalOpen = false;
   modalContainer.classList.add(productModalHiddenCss);
   document.body.classList.remove("no-scroll");
 };
@@ -215,7 +217,7 @@ const openActiveProductModal = (id) => {
   activeModalProduct = modalData;
   const models = [];
   models.push({ key: "name", value: modalData.name });
-  models.push({ key: "imageLink", value: `/rsschool-landing-page/dishes/${id}.png` });
+  models.push({ key: "imageLink", value: `/rsschool-landing-page/dishes/${id}.webp` });
   models.push({ key: "description", value: modalData.description });
   models.push({ key: "size-s", value: modalData.sizes.s.size });
   models.push({ key: "size-m", value: modalData.sizes.m.size });
@@ -230,6 +232,7 @@ const openActiveProductModal = (id) => {
   modalContainer.classList.remove(productModalHiddenCss);
   document.body.classList.add("no-scroll");
 
+  modalOpen = true;
   resetActiveModalProductOption();
   initSizes();
   initAdditives();
@@ -328,5 +331,13 @@ const updatePrice = () => {
     } else {
       setPerStepDesktop();
     }
-  })
+  });
+
+  document.body.addEventListener("keydown", (e) => {
+    if (e.code === "Escape") {
+      if (modalOpen) {
+        closeProductModal();
+      }
+    }
+  });
 })();

@@ -31,7 +31,9 @@ navMobile.querySelector(".nav-link").addEventListener("nav-mobile-menu-button", 
 
 document.body.addEventListener("keydown", (e) => {
     if (e.code === "Escape") {
-        closeNavMobile();
+        if (mobileMenuOpen) {
+            closeNavMobile();
+        }
     }
 })
 
