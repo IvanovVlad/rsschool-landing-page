@@ -1,4 +1,4 @@
-import"./nav-CmqrBJgO.js";var e,t=`coffee`,n=[],r=document.querySelector(`#products-container`),i={coffee:document.querySelector(`#categories-coffee`),tea:document.querySelector(`#categories-tea`),dessert:document.querySelector(`#categories-dessert`)},a=document.querySelector(`#modal-container`),o=`menu-selector-item-active`,s=`modal-container-hidden`,c=e=>e.toLowerCase().replace(/[^\w\d]/g,``),l=(e,...t)=>{for(let n of t)e=e.replace(RegExp(`{{${n.key}}}`,`g`),n.value);return e},u=()=>{r.innerHTML=n.map(e=>{let t=[];for(let n of Object.keys(e)){let r=e[n];typeof r==`string`&&(n===`name`&&t.push({key:`imageLink`,value:`/rsschool-landing-page/dishes/${c(r)}.png`}),t.push({key:n,value:r}))}return l(`
+import"./nav-BYTFK04q.js";var e,t=`coffee`,n=[],r=document.querySelector(`#products-container`),i={coffee:document.querySelector(`#categories-coffee`),tea:document.querySelector(`#categories-tea`),dessert:document.querySelector(`#categories-dessert`)},a=document.querySelector(`#modal-container`),o=`menu-selector-item-active`,s=`modal-container-hidden`,c=e=>e.toLowerCase().replace(/[^\w\d]/g,``),l=(e,...t)=>{for(let n of t)e=e.replace(RegExp(`{{${n.key}}}`,`g`),n.value);return e},u=()=>{r.innerHTML=n.map(e=>{let t=[];for(let n of Object.keys(e)){let r=e[n];typeof r==`string`&&(n===`name`&&t.push({key:`imageLink`,value:`/rsschool-landing-page/dishes/${c(r)}.png`}),t.push({key:n,value:r}))}return l(`
   <div class="price-card" id="#{{name}}">
     <div class="card-image image-zoom-container">
       <img src="{{imageLink}}" alt="{{name}}"/>
@@ -67,4 +67,4 @@ import"./nav-CmqrBJgO.js";var e,t=`coffee`,n=[],r=document.querySelector(`#produ
         <div class="button-secondary" id="modal-close">Close</div>
       </div>
     </div>`,...r),a.querySelector(`#modal-close`).addEventListener(`click`,()=>p()),a.classList.remove(s)};(async()=>{e=await fetch(`/rsschool-landing-page/products.json`).then(e=>e.json()),d(),u();for(let e of Object.keys(i))i[e].addEventListener(`click`,()=>f(e));a.addEventListener(`click`,e=>e.target.id===a.id&&p())})();
-//# sourceMappingURL=menu-CLBFbFbT.js.map
+//# sourceMappingURL=menu-qB6b-WOE.js.map

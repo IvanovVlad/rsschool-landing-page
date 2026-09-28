@@ -614,6 +614,22 @@ body[theme="dark"] .slider-button::after,
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  animation: slider-item-appear 0.4s ease;
+}
+
+.slider-item-hidden {
+  display: none;
+}
+
+@keyframes slider-item-appear {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .slider-item-image {

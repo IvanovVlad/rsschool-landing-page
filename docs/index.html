@@ -7,8 +7,9 @@
     <meta name="color-scheme" content="only light" />
     <title>rsschool-landing-page</title>
     <link rel="stylesheet" type="text/css" href="/rsschool-landing-page/font/index.css" />
-    <script type="module" crossorigin src="/rsschool-landing-page/assets/nav-CmqrBJgO.js"></script>
-    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/nav-Dbgan18B.css">
+    <script type="module" crossorigin src="/rsschool-landing-page/assets/main-nZ1la4Ua.js"></script>
+    <link rel="modulepreload" crossorigin href="/rsschool-landing-page/assets/nav-BYTFK04q.js">
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/nav-BU4x8NKd.css">
   </head>
   <body>
     <header class="header">
@@ -116,29 +117,13 @@
         <h2 class="section-header text-center">
           Choose your <span class="color-accent italic">favorite</span> coffee
         </h2>
-        <div class="slider">
+        <div class="slider" id="slider-container">
           <div class="slider-content">
-            <div class="slider-button"></div>
-            <div class="slider-item-wrpapper">
-              <div class="slider-item">
-                <div class="slider-item-image">
-                  <img src="/rsschool-landing-page/coffee-slider-1.png" alt="S’mores Frappuccino" />
-                </div>
-                <div class="slider-item-title">S’mores Frappuccino</div>
-                <div class="slider-item-description">
-                  This new drink takes an espresso and mixes it with brown sugar and cinnamon before
-                  being topped with oat milk.
-                </div>
-                <div class="slider-item-price">$5.50</div>
-              </div>
-            </div>
-            <div class="slider-button slider-button-right"></div>
+            <div class="slider-button" id="slider-prev"></div>
+            <div class="slider-item-wrpapper" id="slider-items"></div>
+            <div class="slider-button slider-button-right" id="slider-next"></div>
           </div>
-          <div class="slider-options">
-            <div class="slider-option slider-option-active"></div>
-            <div class="slider-option"></div>
-            <div class="slider-option"></div>
-          </div>
+          <div class="slider-options" id="slider-options"></div>
         </div>
       </section>
       <section class="section" id="about">

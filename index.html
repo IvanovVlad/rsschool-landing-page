@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
     <script src="/src/theme.js" defer type="module"></script>
     <script src="/src/nav.js" defer type="module"></script>
+    <script src="/src/slider.js" defer type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -117,29 +118,13 @@
         <h2 class="section-header text-center">
           Choose your <span class="color-accent italic">favorite</span> coffee
         </h2>
-        <div class="slider">
+        <div class="slider" id="slider-container">
           <div class="slider-content">
-            <div class="slider-button"></div>
-            <div class="slider-item-wrpapper">
-              <div class="slider-item">
-                <div class="slider-item-image">
-                  <img src="/coffee-slider-1.png" alt="S’mores Frappuccino" />
-                </div>
-                <div class="slider-item-title">S’mores Frappuccino</div>
-                <div class="slider-item-description">
-                  This new drink takes an espresso and mixes it with brown sugar and cinnamon before
-                  being topped with oat milk.
-                </div>
-                <div class="slider-item-price">$5.50</div>
-              </div>
-            </div>
-            <div class="slider-button slider-button-right"></div>
+            <div class="slider-button" id="slider-prev"></div>
+            <div class="slider-item-wrpapper" id="slider-items"></div>
+            <div class="slider-button slider-button-right" id="slider-next"></div>
           </div>
-          <div class="slider-options">
-            <div class="slider-option slider-option-active"></div>
-            <div class="slider-option"></div>
-            <div class="slider-option"></div>
-          </div>
+          <div class="slider-options" id="slider-options"></div>
         </div>
       </section>
       <section class="section" id="about">
