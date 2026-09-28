@@ -13,7 +13,7 @@ const sliderItemsData = [
     description:
       "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.",
     price: "5.50",
-    imageLink: "/rsschool-landing-page/coffee-slider-1.png",
+    imageLink: "/rsschool-landing-page/coffee-slider-1.webp",
   },
   {
     id: "option-2",
@@ -21,7 +21,7 @@ const sliderItemsData = [
     description:
       "Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.",
     price: "5.00",
-    imageLink: "/rsschool-landing-page/coffee-slider-2.png",
+    imageLink: "/rsschool-landing-page/coffee-slider-2.webp",
   },
   {
     id: "option-3",
@@ -29,7 +29,7 @@ const sliderItemsData = [
     description:
       "A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.",
     price: "4.50",
-    imageLink: "/rsschool-landing-page/coffee-slider-3.png",
+    imageLink: "/rsschool-landing-page/coffee-slider-3.webp",
   },
 ];
 
