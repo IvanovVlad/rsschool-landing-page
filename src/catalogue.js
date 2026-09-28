@@ -117,7 +117,7 @@ const openActiveProductModal = (id) => {
           <img src="{{imageLink}}" alt="{{name}}">
         </div>
       </div>
-      <div>
+      <div class="modal-content-container">
         <div class="modal-title">{{name}}</div>
         <div class="modal-subtitle">{{description}}</div>
         <div class="modal-options">

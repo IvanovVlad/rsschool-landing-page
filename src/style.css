@@ -953,7 +953,7 @@ body[theme="dark"] .image-play-market,
 .menu-selector-item-active {
   color: var(--inverse);
   background-color: var(--bg-container);
-  border-color: var(--bg-container);
+  border-color: var(--b-primary-dark);
 }
 
 .menu-selector-item-active .menu-selector-icon {
@@ -1038,6 +1038,7 @@ body[theme="dark"] .image-play-market,
   top: 0;
   width: 100lvw;
   height: 100lvh;
+  padding-inline: 12px;
 
   display: flex;
   justify-content: center;
@@ -1054,6 +1055,7 @@ body[theme="dark"] .image-play-market,
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
 
   /*remove*/
@@ -1118,7 +1120,12 @@ body[theme="dark"] .image-play-market,
 .modal-options-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
+}
+
+.modal-content-container {
+  flex: 1;
 }
 
 .modal-price {
