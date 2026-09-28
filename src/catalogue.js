@@ -36,10 +36,46 @@ const productsContainer = document.querySelector("#products-container"),
     tea: document.querySelector("#categories-tea"),
     dessert: document.querySelector("#categories-dessert"),
   },
-  modalContainer = document.querySelector("#modal-container");
+  modalContainer = document.querySelector("#modal-container"),
+  paginationButtonContainer = document.querySelector("#pagination-increase");
 const activeCategoryCss = "menu-selector-item-active",
   productModalHiddenCss = "modal-container-hidden";
 let activeModalProductOption, activeModalProduct;
+
+const usePagination = (total, perStep) => {
+  let step = 1;
+
+  const getCount = () => step * perStep;
+  const increaseStep = () => step += 1;
+  const isMaxPage = () => getCount() >= total;
+
+  return { getCount, isMaxPage, increaseStep };
+};
+
+const mobilePerStep = 4;
+const desktopPerStep = 8;
+
+const getRelativePerStep = () => window.innerWidth <= 768 ? mobilePerStep : desktopPerStep;
+
+let perStep = getRelativePerStep();
+
+const setPerStepDesktop = () => {
+  if (pagination && perStep !== desktopPerStep) {
+    perStep = desktopPerStep;
+    updateActiveProducts();
+    renderProductCards();
+  }
+};
+
+const setPerStepMobile = () => {
+  if (pagination && perStep !== mobilePerStep) {
+    perStep = mobilePerStep;
+    updateActiveProducts();
+    renderProductCards();
+  }
+};
+
+let pagination;
 
 const normName = (s) => s.toLowerCase().replace(/[^\w\d]/g, "");
 
@@ -62,7 +98,12 @@ const renderProductCards = () => {
       <div class="card-price">${"$" + "{{price}}"}</div>
     </div>
   </div>`;
-  const renderedProducts = activeProducts.map((p) => {
+  if (pagination.isMaxPage()) {
+    paginationButtonContainer.classList.add("hidden");
+  } else {
+    paginationButtonContainer.classList.remove("hidden");
+  }
+  const renderedProducts = activeProducts.slice(0, pagination.getCount()).map((p) => {
     const models = [];
 
     for (const key of Object.keys(p)) {
@@ -87,6 +128,7 @@ const renderProductCards = () => {
 
 const updateActiveProducts = () => {
   activeProducts = allProducts.filter((c) => c.category === activeCategory);
+  pagination = usePagination(activeProducts.length, perStep);
 };
 
 const setCategory = (category) => {
@@ -273,4 +315,18 @@ const updatePrice = () => {
     "click",
     (e) => e.target.id === modalContainer.id && closeProductModal(),
   );
+  paginationButtonContainer.addEventListener("click", () => {
+    if (pagination.isMaxPage()) return;
+    pagination.increaseStep();
+    renderProductCards();
+  });
+
+  window.addEventListener("resize", () => {
+    console.log(window.innerWidth, perStep);
+    if (window.innerWidth <= 768) {
+      setPerStepMobile()
+    } else {
+      setPerStepDesktop();
+    }
+  })
 })();

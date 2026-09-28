@@ -544,6 +544,31 @@ body[theme="light"] .theme-toggle-btn.active-dark:hover [data-theme="hide-dark"]
   display: block;
 }
 
+.refresh-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--b-inverse);
+  background: transparent;
+  margin: 40px auto 0;
+}
+
+.refresh-button:hover {
+  cursor: pointer;
+  background: var(--bg-container);
+}
+
+body[theme="light"] .refresh-button:hover img[data-theme="hide-light"] {
+  display: none !important;
+}
+
+body[theme="light"] .refresh-button:hover img[data-theme="hide-dark"] {
+  display: block !important;
+}
+
 .slider-button {
   display: flex;
   justify-content: center;
